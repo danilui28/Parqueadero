@@ -11,6 +11,10 @@ public class Motocicleta extends Vehiculo {
 	public void setCilindraje(int cilindraje) {
 		this.cilindraje = cilindraje;
 	}
+	
+	public Motocicleta() {
+	    super();
+	}
 
 	public Motocicleta(String placa, String propetario, int cilindraje) {
 		super(placa, propetario);

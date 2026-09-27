@@ -24,8 +24,8 @@ public class CobroController {
 
     @PostMapping("/procesar/{placa}/{horas}")
     public ResponseEntity<TicketCobro> procesarSalida(
-            @PathVariable String placa,
-            @PathVariable int horas) {
+            @PathVariable("placa") String placa,
+            @PathVariable("horas") int horas) {
 
         TicketCobro ticket = servicioCobro.procesarSalida(placa, horas);
 

@@ -55,7 +55,8 @@ public class VehiculoController {
     }
 
     @GetMapping("/{placa}")
-    public ResponseEntity<Vehiculo> buscarPorPlaca(@PathVariable String placa) {
+    public ResponseEntity<Vehiculo> buscarPorPlaca(
+            @PathVariable("placa") String placa) {
 
         Vehiculo vehiculo = servicioVehiculos.buscarPorPlaca(placa);
 

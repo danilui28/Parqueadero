@@ -11,6 +11,10 @@ public class Auto extends Vehiculo {
 	public void setNumeroPuertas(int numeroPuertas) {
 		this.numeroPuertas = numeroPuertas;
 	}
+	
+	public Auto() {
+	    super();
+	}
 
 	public Auto(String placa, String propetario, int numeroPuertas) {
 		super(placa, propetario);

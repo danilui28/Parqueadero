@@ -3,45 +3,51 @@ package com.krakedev.parqueadero.modelo;
 import java.time.LocalDateTime;
 
 public abstract class Vehiculo {
-	
-	private String placa;
-	private String propetario;
-	private LocalDateTime horaIngreso;
-	
-	public String getPlaca() {
-		return placa;
-	}
 
-	public void setPlaca(String placa) {
-		this.placa = placa;
-	}
+    private String placa;
+    private String propietario;
+    private LocalDateTime horaIngreso;
 
-	public String getPropetario() {
-		return propetario;
-	}
+    public Vehiculo() {
+        this.horaIngreso = LocalDateTime.now();
+    }
 
-	public void setPropetario(String propetario) {
-		this.propetario = propetario;
-	}
+    public Vehiculo(String placa, String propietario) {
+        this.placa = placa;
+        this.propietario = propietario;
+        this.horaIngreso = LocalDateTime.now();
+    }
 
-	public LocalDateTime getHoraIngreso() {
-		return horaIngreso;
-	}
+    public String getPlaca() {
+        return placa;
+    }
 
-	public void setHoraIngreso(LocalDateTime horaIngreso) {
-		this.horaIngreso = horaIngreso;
-	}
+    public void setPlaca(String placa) {
+        this.placa = placa;
+    }
 
-	public Vehiculo(String placa, String propetario) {
-		this.placa = placa;
-		this.propetario = propetario;
-		this.horaIngreso = LocalDateTime.now();
-	}
-	
-	@Override
-	public String toString() {
-		return "Placa= " + placa + ", Propetario= " + propetario + ", Hora de ingreso= " + horaIngreso;
-	}
-	
-	public abstract double calcularTarifa(int horasPermanencia);
+    public String getPropietario() {
+        return propietario;
+    }
+
+    public void setPropietario(String propietario) {
+        this.propietario = propietario;
+    }
+
+    public LocalDateTime getHoraIngreso() {
+        return horaIngreso;
+    }
+
+    public void setHoraIngreso(LocalDateTime horaIngreso) {
+        this.horaIngreso = horaIngreso;
+    }
+
+    @Override
+    public String toString() {
+        return "Placa= " + placa
+                + ", Propietario= " + propietario
+                + ", Hora de ingreso= " + horaIngreso;
+    }
+
+    public abstract double calcularTarifa(int horasPermanencia);
 }
